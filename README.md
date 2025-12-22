@@ -55,3 +55,10 @@ npm run storybook
 * **Accessibility First**: Every component is designed with **ARIA compliance** and keyboard navigation in mind.
 * **Performance**: Zero-runtime overhead by leveraging **Tailwind CSS 4** and optimized build steps.
 * **Extensibility**: Components use the **composition pattern**, allowing consumers to extend functionality via props and className merging.
+
+
+--------
+TODO: 
+
+- CI/CD publish in npm and update storybook in vercel;
+- Update Readme.md;
