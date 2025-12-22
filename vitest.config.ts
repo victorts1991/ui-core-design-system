@@ -12,5 +12,12 @@ export default defineConfig({
     environment: 'jsdom',
     // We'll create this file next to handle global test imports
     setupFiles: './src/test/setup.ts',
+    exclude: [
+        'node_modules',
+        'dist', // Adicione isso para ignorar a pasta de build
+        '.idea',
+        '.git',
+        '.cache'
+    ],
   },
 });
