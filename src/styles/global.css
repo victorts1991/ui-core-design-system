@@ -1,9 +1,17 @@
 @import "tailwindcss";
 
+/* Configuration for Tailwind 4 */
 @theme {
   --color-brand-primary: var(--color-blue-600);
   --color-brand-secondary: var(--color-slate-200);
-  
-  /* Customizing global transitions */
   --default-transition-duration: 200ms;
+}
+
+/* To make Tailwind agnostic and high priority, we can wrap utilities 
+  or use the 'important' selector strategy. 
+  The simplest way in v4 is to use the utility layer:
+*/
+@layer utilities {
+  .bg-blue-600 { background-color: var(--color-blue-600) !important; }
+  .text-white { color: var(--color-white) !important; }
 }
