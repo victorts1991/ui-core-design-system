@@ -1,85 +1,101 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { fn } from '@storybook/test';
 import { Button } from './Button';
 
 /**
  * Button Component Documentation
- * This story demonstrates the various states and variants of the primary Button component.
- * Focused on Accessibility and Design System consistency.
+ * * This story demonstrates the various states and variants of the Button component.
+ * It is built to be accessible, performant, and consistent with the Design System.
  */
 const meta: Meta<typeof Button> = {
   title: 'Components/Button',
   component: Button,
+  // Automatically generates documentation page
   tags: ['autodocs'],
+  // Defines the controls and documentation for each prop
   argTypes: {
     variant: {
       control: 'select',
-      description: 'The visual style of the button',
+      description: 'The visual style variant of the button',
     },
     size: {
       control: 'select',
-      description: 'The physical size of the button',
+      description: 'The vertical and horizontal padding scale',
     },
     isLoading: {
       control: 'boolean',
-      description: 'Whether the button is in a loading state',
+      description: 'Disables the button and shows a loading spinner',
     },
     disabled: {
       control: 'boolean',
-      description: 'Whether the button is interactive or not',
+      description: 'Prevents user interaction',
     },
+    onClick: { 
+      description: 'Event handler called when the button is clicked',
+    },
+  },
+  // Use fn() to spy on the onClick event and show it in the Actions panel
+  args: { 
+    onClick: fn(),
   },
 };
 
 export default meta;
 type Story = StoryObj<typeof Button>;
 
-/** * Default state for the primary action in the UI. 
+/**
+ * Primary action button for the main call-to-action in a view.
  */
 export const Primary: Story = {
   args: {
     variant: 'primary',
-    children: 'Primary Button',
+    children: 'Primary Action',
     size: 'md',
   },
 };
 
-/** * Used for secondary or alternative actions. 
+/**
+ * Secondary button for less prominent actions.
  */
 export const Secondary: Story = {
   args: {
     variant: 'secondary',
-    children: 'Secondary Button',
+    children: 'Secondary Action',
   },
 };
 
-/** * Specifically for destructive actions like delete or remove. 
+/**
+ * Danger variant for destructive actions (e.g., Delete, Remove).
  */
 export const Danger: Story = {
   args: {
     variant: 'danger',
-    children: 'Delete Action',
+    children: 'Destructive Action',
   },
 };
 
-/** * Subtle buttons used for navigation or less prominent actions. 
+/**
+ * Ghost variant for subtle actions or navigation items.
  */
 export const Ghost: Story = {
   args: {
     variant: 'ghost',
-    children: 'Ghost Button',
+    children: 'Ghost Action',
   },
 };
 
-/** * Demonstrates the button state during asynchronous operations. 
+/**
+ * Loading state showing the spinner and preventing double submissions.
  */
 export const Loading: Story = {
   args: {
-    children: 'Wait a moment',
+    children: 'Processing...',
     isLoading: true,
   },
 };
 
-/** * Large scale button for Hero sections or Call to Actions. 
+/**
+ * Large button for high-emphasis areas like Hero sections.
  */
 export const Large: Story = {
   args: {
@@ -88,7 +104,8 @@ export const Large: Story = {
   },
 };
 
-/** * Small scale button for tight UI spaces. 
+/**
+ * Small button for compact layouts or toolbars.
  */
 export const Small: Story = {
   args: {
