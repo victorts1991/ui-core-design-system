@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: var(--color-blue-600);
+  --color-brand-secondary: var(--color-slate-200);
+  
+  /* Customizing global transitions */
+  --default-transition-duration: 200ms;
+}
