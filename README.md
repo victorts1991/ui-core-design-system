@@ -62,3 +62,4 @@ TODO:
 
 - CI/CD publish in npm and update storybook in vercel;
 - Update Readme.md;
+- Add: Input, Card, Typography and Badge
