@@ -5,19 +5,18 @@
     "module": "ESNext",
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "jsx": "react-jsx",
-    "moduleResolution": "bundler", /* Melhor para bibliotecas com tsup */
+    "moduleResolution": "bundler",
     
     /* Outputs */
     "outDir": "./dist",
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
-    "removeComments": false,
+    "emitDeclarationOnly": false, /* tsup cuidará disso, mas o tsc precisa validar o código */
 
     /* Strictness */
     "strict": true,
     "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
     "skipLibCheck": true,
     
     /* Interop */
@@ -26,12 +25,12 @@
     "moduleDetection": "force",
     "allowSyntheticDefaultImports": true,
 
-    /* Path Aliases (Opcional, mas ajuda muito) */
+    /* Path Aliases */
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     }
   },
   "include": ["src"],
-  "exclude": ["node_modules", "dist", "**/*.stories.tsx", "**/*.test.ts"]
+  "exclude": ["node_modules", "dist"] 
 }
