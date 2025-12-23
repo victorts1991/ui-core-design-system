@@ -1,8 +1,36 @@
-# @victorts1991/ui-core-design-system
+# @vtspecian/ui-core-design-system
 
-A high-performance, accessible, and scalable UI Design System built for modern web applications. This project follows industry-leading architectural patterns for component libraries, ensuring a robust foundation for React-based ecosystems.
+A high-performance, accessible, and scalable UI Design System built for modern web applications.
 
-## 🚀 **Tech Stack**
+[![NPM Version](https://img.shields.io/npm/v/@vtspecian/ui-core-design-system)](https://www.npmjs.com/package/@vtspecian/ui-core-design-system)
+[![Storybook](https://img.shields.io/badge/-Storybook-FF4785?logo=storybook&logoColor=white)](https://ui-core-design-system.vercel.app/)
+
+## 🔗 Quick Links
+* **NPM Registry**: [@vtspecian/ui-core-design-system](https://www.npmjs.com/package/@vtspecian/ui-core-design-system)
+* **Live Documentation**: [Storybook on Vercel](https://ui-core-design-system.vercel.app/)
+
+## ✨ Core Feature: Zero-Config
+This library is designed for a **plug-and-play experience**. Leveraging custom build pipelines, **you do not need to import CSS files** in your project's root. Styles are automatically injected into the DOM upon component usage.
+
+## 🚀 **Installation**
+
+```bash
+npm install @vtspecian/ui-core-design-system
+```
+
+## 💻 **Usage**
+
+```tsx
+import { Button } from '@vtspecian/ui-core-design-system';
+
+export const App = () => (
+  <Button variant="primary" size="md">
+    Interactive Button
+  </Button>
+);
+```
+
+## 🛠 **Tech Stack**
 
 * **React 19**: Leveraging the newest concurrent rendering features and hooks.
 * **Tailwind CSS 4**: Utilizing the latest CSS-engine for optimized, utility-first styling.
@@ -10,18 +38,6 @@ A high-performance, accessible, and scalable UI Design System built for modern w
 * **tsup**: Advanced bundler powered by **esbuild** for dual-format (ESM/CJS) distribution.
 * **Storybook 8**: Comprehensive documentation and isolated development environment.
 * **Vitest & React Testing Library**: Modern testing suite for reliable unit and interaction testing.
-
-## 🛠 **Project Architecture**
-
-The project follows a modular structure designed for maintainability and clear separation of concerns:
-
-```text
-src/
-├── components/     # Atomic UI components with logic and variants
-├── styles/         # Global styles and Tailwind v4 theme definitions
-├── test/           # Test setup and global configuration
-└── index.ts        # Library public API (Entry point)
-```
 
 ## 🧪 **Quality Assurance (QA)**
 
@@ -46,20 +62,9 @@ npm run storybook
    npm run build
    ```
 2. **Linting**: Static analysis to ensure code consistency.
-   ```bash
-   npm run lint
-   ```
 
 ## 📖 **Component Principles**
 
 * **Accessibility First**: Every component is designed with **ARIA compliance** and keyboard navigation in mind.
 * **Performance**: Zero-runtime overhead by leveraging **Tailwind CSS 4** and optimized build steps.
 * **Extensibility**: Components use the **composition pattern**, allowing consumers to extend functionality via props and className merging.
-
-
---------
-TODO: 
-
-- CI/CD publish in npm and update storybook in vercel;
-- Update Readme.md;
-- Add: Input, Card, Typography and Badge
