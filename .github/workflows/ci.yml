@@ -1,32 +1,34 @@
-name: CI
+name: Publish to NPM
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
-  build-and-test:
+  publish:
     runs-on: ubuntu-latest
-
+    environment: 
+      name: Production
     steps:
       - uses: actions/checkout@v4
       
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: 'npm'
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
-        run: npm install --legacy-peer-deps
-
-      - name: Lint check
-        run: npm run lint
+        run: npm install
 
       - name: Run tests
-        run: npm test
+        run: npm run test
 
       - name: Build project
         run: npm run build
+
+      - name: Publish to NPM
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
