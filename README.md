@@ -55,16 +55,3 @@ To explore the component library in isolation via **Storybook**:
 npm run storybook
 ```
 
-## 🏗 **Development Workflow**
-
-1. **Building for Production**: Generates an optimized bundle in the **dist/** directory, including type definitions.
-   ```bash
-   npm run build
-   ```
-2. **Linting**: Static analysis to ensure code consistency.
-
-## 📖 **Component Principles**
-
-* **Accessibility First**: Every component is designed with **ARIA compliance** and keyboard navigation in mind.
-* **Performance**: Zero-runtime overhead by leveraging **Tailwind CSS 4** and optimized build steps.
-* **Extensibility**: Components use the **composition pattern**, allowing consumers to extend functionality via props and className merging.

@@ -1,6 +1,6 @@
 {
   "name": "@vtspecian/ui-core-design-system",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A scalable UI Design System built with React, Tailwind CSS and TypeScript.",
   "type": "module",
   "main": "./dist/index.cjs",
