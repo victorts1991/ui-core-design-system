@@ -23,9 +23,15 @@ First of all, thank you for considering contributing to this project! This is a 
 
 As per our repository security rules:
 * All changes must be submitted via **Pull Request**.
-* Direct pushes to the `main` branch are blocked.
+* Direct pushes to the `main` branch are blocked by **Repository Rulesets**.
 * Every PR requires at least **one approval** from the maintainer (@victorts1991) before merging.
 * The CI/CD pipeline will automatically run build and test checks on your PR.
+
+## 📦 Publishing Process (CI/CD)
+This project uses **GitHub Actions Environments** to ensure secure and controlled releases:
+* **Manual Gatekeeping**: After a PR is merged, the deployment to NPM (Production) is not automatic.
+* **Approval Required**: A manual review and approval by the maintainer are mandatory to trigger the final publish step.
+* This setup prevents accidental releases and ensures that only production-ready code is published.
 
 ## 🧪 Quality Assurance
 
