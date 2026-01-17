@@ -15,3 +15,17 @@ export const Primary: Story = {
     children: "Primary Action",
   },
 };
+
+export const Secondary: Story = {
+  args: {
+    variant: "secondary",
+    children: "Secondary Action",
+  },
+};
+
+export const Danger: Story = {
+  args: {
+    variant: "danger",
+    children: "Destructive Action",
+  },
+};
