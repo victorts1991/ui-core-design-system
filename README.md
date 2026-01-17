@@ -21,12 +21,22 @@ npm install @vtspecian/ui-core-design-system
 ## 💻 **Usage**
 
 ```tsx
-import { Button } from '@vtspecian/ui-core-design-system';
+import { Button, Typography } from '@vtspecian/ui-core-design-system';
 
 export const App = () => (
-  <Button variant="primary" size="md">
-    Interactive Button
-  </Button>
+  <main>
+    <Typography as="h1" variant="h1" weight="font-bold">
+      UI Core System
+    </Typography>
+    
+    <Typography as="p" variant="p" className="mb-4">
+      A polymorphic and accessible design system.
+    </Typography>
+
+    <Button variant="primary" size="md">
+      Get Started
+    </Button>
+  </main>
 );
 ```
 
